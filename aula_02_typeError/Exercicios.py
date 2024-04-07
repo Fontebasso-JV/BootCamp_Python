@@ -4,6 +4,38 @@
 # 2. Crie um programa que receba um número do usuário e calcule o resto da divisão desse número por 5.
 # 3. Desenvolva um programa que multiplique dois números fornecidos pelo usuário e mostre o resultado.
 # 4. Faça um programa que peça dois números inteiros e imprima a divisão inteira do primeiro pelo segundo.
+
+#type check
+
+numero = 10
+if isinstance(numero, int):
+    print("A variável é um inteiro.")
+else:
+    print("A variável não é um inteiro.")
+
+# Exemplo que causa TypeError
+try:
+    resultado = len(5)
+    print(resultado)
+except TypeError as e:
+    print(f'Atenção Erro: {e}')  # Imprime a mensagem de erro
+else:
+    print('Tudo ocorreu bem!')
+finally:
+    print('O importante é participar')
+
+try:
+    n1 = int(input('Digite o primeiro numero: '))
+    n2 = int(input('Digite o segundo numero: '))
+    resultado = n1//n2
+    print(resultado)
+except ZeroDivisionError:
+    print('Integer division or modulo by zero ')
+except KeyboardInterrupt:
+    print('Acho que você não quis inserir um numero')
+
+
+
 # 5. Escreva um programa que calcule o quadrado de um número fornecido pelo usuário.
 
 # #### Números de Ponto Flutuante (`float`)
@@ -53,5 +85,30 @@ print(f'''
 # 21: Conversor de Temperatura
 # 22: Verificador de Palíndromo
 # 23: Calculadora Simples
+
+operacao = input('Digite o simbolo da operação desejada  ( "+" , "-" ,  "/" , "*")')
+
+num1 = int(input('Digite o primeiro numero: '))
+num2 = int(input('Digite o primeiro numero: '))
+
+try:
+    if isinstance(num1,int)  or isinstance(num2,int):
+        if operacao.find('+','-','/','*'):
+            if operacao == '+':
+                resultadocalc = num1 + num2
+            elif operacao == '-':
+                resultadocalc = num1 - num2
+            elif operacao == '*':
+                resultadocalc = num1 * num2
+            elif operacao == '/':
+                resultadocalc = num1 / num2
+    else:
+        print("Operado inválido ou divisão por zero")
+    print(f'O resultado da sua operação é : {resultadocalc}')
+
+except ValueError:
+    print(f'Erro: Entrada inválida')
+
+
 # 24: Classificador de Números
 # 25: Conversão de Tipo com Validação
