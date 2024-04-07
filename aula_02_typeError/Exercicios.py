@@ -17,7 +17,8 @@
 import math as mt
 
 raio_circulo = float(input("Digite o raio: "))
-area_do_circulo = 2 * mt.pi * raio_circulo ** 2
+
+area_do_circulo =  mt.pi * raio_circulo ** 2
 
 print(f'A area do circulo é {area_do_circulo}')
 
