@@ -28,7 +28,7 @@ else:
 #################
 ##DICIONARIOS {} A DIFERENÇA ENTRE LISTA É QUE A DIC ATRIBUI UMA CHAVE A UM VALOR
 #################
-import json
+""" import json
 import time
 produto_01: dict = {
     "nome": "Televisão",
@@ -54,4 +54,21 @@ carrinho_json = json.dumps(carrinho)
 
 print(carrinho)
 time.sleep(4)
-print(carrinho)
+print(carrinho) """
+
+
+import csv
+
+caminho_arquivo: str = "exemplo.csv"
+
+arquivo_csv: list = []
+
+with open(file=caminho_arquivo,mode="r",encoding='utf-8') as arquivo:
+    leitor_csv = csv.DictReader(f=arquivo)
+
+    for linha in leitor_csv:
+        arquivo_csv.append(linha)
+
+print(arquivo_csv)
+for registro in arquivo_csv:
+    print(registro)
