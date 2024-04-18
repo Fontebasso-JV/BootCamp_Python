@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "aula-08"
+version = "0.1.0"
+description = ""
+authors = ["João Fontebasso <joao.alvescont@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandera = "^0.18.3"
+pandas = "^2.2.2"
+fastparquet = "^2024.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
