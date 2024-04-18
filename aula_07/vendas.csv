@@ -1,0 +1,7 @@
+Produto,Categoria,Quantidade,Venda,entregue
+Notebook,Electronics,5,3000,true
+Smartphone,Electronics,10,500,false
+Camiseta,Apparel,20,20,false
+Cafeteira,Kitchen,3,100,false
+Tênis,Apparel,10,50,false
+Tablet,Electronics,2,1500,false
